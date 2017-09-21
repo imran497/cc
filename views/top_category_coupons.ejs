@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-12 text-center margin-10-0">
+    <h5>Top Categories</h5>
+  </div>
+  <div class="d-flex flex-nowrap col-12 categoryTabsParent">
+    <div class="col-5 col-md d-flex justify-content-center categoryTabs" ng-class="{active: topCategoryCoupons[0].CategoryId == category.id}" ng-repeat="category in topCategories">
+      <a class="d-block" href="javascript:void(0)" ng-click="changeTopCategoryCoupons(category.id)">
+        <div class="text-center">
+          <img ng-src="/assets/images/category_images/{{category.CategorynameImage}}" height="40px" width="40px"/>
+          <br class="hidden-lg-up">
+          <span>{{category.Categoryname}}</span>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-12 d-flex flex-wrap">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="coupon in topCategoryCoupons">
+
+        <display-coupons coupon="coupon" show-brand="true"></display-coupons>
+
+      </div>
+    </div>
+  </div>
+</div>

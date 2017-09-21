@@ -1,0 +1,77 @@
+@media (max-width: 575px) {
+  .banner-img {
+    height: 150px; }
+  .navigation_links_header ul {
+    padding: 0px;
+    margin: 0px; }
+    .navigation_links_header ul li {
+      padding: 10px 5px;
+      margin: 5px 0px; }
+  .brand-name-section {
+    height: auto; }
+    .brand-name-section .brand-name-div {
+      justify-content: center; }
+    .brand-name-section .brand-image {
+      position: relative;
+      color: white; }
+  .categoryTabsParent {
+    overflow-x: scroll; }
+  .my-profile-user-profile {
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+    padding-bottom: 1em; }
+  .brandname-f-to-r {
+    position: relative;
+    width: calc(100% + 30px); }
+  .filter-f-to-r {
+    position: relative; } }
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .banner-img {
+    height: 220px; }
+  .brand-name-section {
+    height: auto; }
+    .brand-name-section .brand-name-div {
+      justify-content: center; }
+    .brand-name-section .brand-image {
+      position: relative;
+      color: white; }
+  .categoryTabsParent {
+    overflow-x: scroll; }
+  .my-profile-user-profile {
+    border-right: 1px solid black; }
+  .brandname-f-to-r {
+    position: relative;
+    width: calc(100% + 30px); }
+  .filter-f-to-r {
+    position: relative; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner-img {
+    height: 280px; }
+  .brand-name-section {
+    height: auto; }
+    .brand-name-section .brand-name-div {
+      justify-content: center; }
+    .brand-name-section .brand-image {
+      position: relative;
+      color: white; }
+  .my-profile-user-profile {
+    border-right: 1px solid black; }
+  .brandname-f-to-r {
+    position: relative;
+    width: calc(100% + 30px); }
+  .filter-f-to-r {
+    position: relative; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .banner-img {
+    height: 350px; }
+  .my-profile-user-profile {
+    border-right: 1px solid black; } }
+
+@media (min-width: 1200px) {
+  .banner-img {
+    height: 350px; }
+  .my-profile-user-profile {
+    border-right: 1px solid black; } }

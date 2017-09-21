@@ -1,0 +1,49 @@
+<div class="col-12">
+  <div class="row brand-name-section">
+      <div class="col-lg-3 push-lg-9 text-lg-right text-sm-center text-md-center text-center brand-image">
+      <span class="d-inline-block text-center">
+        <div class="clearfix bg-warning" style="width: 180px">
+          <span class="d-inline-block float-left brand-logo-copupon-by-category bg-white" ng-repeat="brandLogo in brandLogos track by $index">
+            <span class="d-flex h-100 align-items-center">
+              <img ng-src="/assets/images/brand_images/{{brandLogo}}" type="image/png" width="100%">
+            </span>
+          </span>
+          <!-- img src="/assets/images/brand_images/{{brandLogo}}" height="90px" width="90px" class="float-left" type="image/png" ng-repeat="brandLogo in brandLogos track by $index" -->
+        </div>
+        <h6>{{category}}</h6>
+      </span>
+    </div>
+    <div class="col-lg-9 d-flex align-items-center brand-name-div">
+      <h3>{{category}} Coupons and Deals</h3>
+    </div>
+  </div>
+      <div class="row">
+        <div class="col-md-2 margin-10-0 padding-5 filter-section">
+
+          <coupon-filters coupons-displayed="couponsCategory"></coupon-filters>
+
+        </div>
+        <div class="col-lg-8 col-md-10 d-flex flex-wrap coupons-section">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" ng-repeat="coupon in couponsCategory">
+
+              <display-coupons coupon="coupon" show-brand="true"></display-coupons>
+
+            </div>
+
+            <div class="col-sm-12 text-center margin-10-0" ng-if="relatedCoupons">
+              <h5>
+                <span class="other-coupons-header padding-5-0">Other Coupons</span>
+              </h5>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-12" ng-repeat="coupon in relatedCoupons">
+
+              <display-coupons coupon="coupon" show-brand="true"></display-coupons>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+</div>

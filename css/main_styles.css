@@ -1,0 +1,82 @@
+.body_container {
+  -webkit-padding: 0px 0px 0px 0px;
+  -moz-padding: 0px 0px 0px 0px;
+  -ms-padding: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px; }
+
+.font-20 {
+  font-size: 20px !important; }
+
+.font-18 {
+  font-size: 18px !important; }
+
+.font-16 {
+  font-size: 16px !important; }
+
+.font-14 {
+  font-size: 14px !important; }
+
+.font-12 {
+  font-size: 12px !important; }
+
+.margin-5-0 {
+  margin: 5px 0px; }
+
+.margin-10-0 {
+  margin: 10px 0px; }
+
+.padding-5-0 {
+  padding: 5px 0px; }
+
+.padding-10-0 {
+  padding: 10px 0px; }
+
+.padding-0-5 {
+  padding: 0px 5px; }
+
+.padding-0-10 {
+  padding: 0px 10px; }
+
+.padding-5 {
+  padding: 5px; }
+
+.padding-10 {
+  padding: 10px; }
+
+.error {
+  color: red; }
+
+.success {
+  color: green; }
+
+.hover-pointer:hover {
+  cursor: pointer; }
+
+.header-violet {
+  background-color: #826995;
+  color: white; }
+
+.color-white, .color-white:hover {
+  color: white; }
+
+.bg-white {
+  background-color: white; }
+
+ul li {
+  list-style: none; }
+
+.btn-blue, .btn-blue:hover {
+  background-color: #144a56;
+  border-color: #144a56;
+  color: white; }
+
+.custom-scroll-bar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5; }
+
+.custom-scroll-bar::-webkit-scrollbar {
+  width: 2px;
+  background-color: #F5F5F5; }
+
+.custom-scroll-bar::-webkit-scrollbar-thumb {
+  background-color: #000000; }

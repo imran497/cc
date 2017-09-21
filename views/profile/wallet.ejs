@@ -1,0 +1,15 @@
+<div class="col-12 bg-white padding-10-0" style="min-height:350px">
+  <table class="col-12 col-md-8 offset-md-2">
+    <tr>
+      <th class="text-center">Coupon Applied on</th>
+      <th class="text-center">CouponCrown Cashback</th>
+    </tr>
+    <tr ng-repeat="data in walletData">
+      <td class="text-center">{{data.transactionDate}}</td>
+      <td class="text-center">{{data.cashbackAmount}}/-</td>
+    </tr>
+  </table>
+  <span ng-hide="walletData" class="d-block text-center margin-10-0">
+    <h2>No Coupons used yet</h2>
+  </span>
+</div>

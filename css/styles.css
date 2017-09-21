@@ -1,0 +1,251 @@
+body {
+  /*background-image: url('/assets/images/background/grey.png');*/
+  background-color: rgba(232, 232, 232, 0.67); }
+
+/*//////////////////-----------COMMON IN ALL PAGES ------------------///////////////////////*/
+.other-coupons-header {
+  border-bottom: 2px solid grey; }
+
+/*----------- HEADER STYLES -----------------------*/
+header {
+  background-color: #112a35;
+  z-index: 100;
+  box-shadow: 0px 1px 2px black; }
+
+.logo-div > a {
+  color: white;
+  text-decoration: none; }
+
+.logo {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  transform: scale(1.5);
+  margin-left: 1em;
+  margin-top: 5px; }
+
+.navigation_links_header ul {
+  list-style: none; }
+  .navigation_links_header ul li {
+    float: left;
+    display: block;
+    margin: 0em 1em; }
+
+#categoriesAbsoluteHeader:hover, #storesAbsoluteHeader:hover {
+  font-size: 20px; }
+
+#categoriesAbsoluteHeaderTarget, #storesAbsoluteHeaderTarget {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  color: black;
+  text-align: center;
+  display: none;
+  left: 0px;
+  box-shadow: 0px 2px 3px black; }
+
+#my_profile_menu {
+  position: absolute;
+  top: 100%;
+  padding: 5px 30px;
+  background-color: #112a35;
+  right: 0px;
+  display: none;
+  z-index: 100; }
+  #my_profile_menu ul {
+    padding: 0px; }
+
+.header-buttons, header-buttons:hover {
+  background-color: #c9302c;
+  border-color: #c9302c; }
+
+/*-------------------------- LOGIN OVERLAY STYLES ----------------------------------*/
+/*-------------- BRAND NAME AND BRAND IMAGE SECTION ------------*/
+.brand-name-section {
+  height: 100px;
+  background: -webkit-linear-gradient(141deg, #112a35 0%, #123646 71%, #4d6873 100%);
+  background: -moz-linear-gradient(141deg, #112a35 0%, #123646 71%, #4d6873 100%);
+  background: linear-gradient(141deg, #112a35 0%, #123646 71%, #4d6873 100%);
+  background: -ms-linear-gradient(141deg, #112a35 0%, #123646 71%, #4d6873 100%);
+  transition: position 2s; }
+  .brand-name-section .brand-name-div {
+    color: white; }
+  .brand-name-section .brand-image {
+    position: absolute; }
+
+/*----------------------- TRENDING COUPONS ----------------------------------*/
+.trending-coupons-div {
+  background-color: white;
+  padding: 20px 0px;
+  margin-top: 30px; }
+  .trending-coupons-div a {
+    color: black; }
+  .trending-coupons-div a > div {
+    height: 240px;
+    overflow: hidden; }
+  .trending-coupons-div .title-div {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    background-color: white;
+    padding: 10px;
+    z-index: 100; }
+
+/*------------------------ FILTERS LEFT -------------------------*/
+.filter-div {
+  font-weight: 600;
+  font-size: 14px;
+  background-color: #efefef; }
+  .filter-div h6 {
+    border-bottom: 1px solid rgba(199, 199, 199, 0.39);
+    padding-bottom: 10px; }
+  .filter-div .custom-scroll-bar {
+    max-height: 250px;
+    overflow-y: scroll; }
+  .filter-div a {
+    color: black; }
+
+/*---------------------- DISPLAY COUPONS ------------------------------ */
+.coupon-div {
+  margin: 10px 0px;
+  background-color: white;
+  /*box-shadow: 0px 0px 1px grey;*/
+  padding-top: 5px; }
+
+.coupon-div:hover {
+  box-shadow: 0px 3px 4px black; }
+
+.coupon-brand-info span {
+  color: #112a35;
+  max-width: 40%;
+  height: 40px; }
+
+.coupon-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #252525; }
+
+.coupon-description {
+  height: 80px;
+  overflow: hidden; }
+  .coupon-description span:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: -webkit-linear-gradient(180deg, transparent 20%, transparent 20%, white);
+    background: -moz-linear-gradient(180deg, transparent 20%, transparent 20%, white);
+    background: linear-gradient(180deg, transparent 20%, transparent 20%, white);
+    background: -ms-linear-gradient(180deg, transparent 20%, transparent 20%, white);
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    content: ""; }
+  .coupon-description ul li {
+    list-style: disc; }
+
+.coupon-button {
+  margin-top: 10px; }
+  .coupon-button a {
+    border-radius: 0; }
+
+.coupon-button-bg-color {
+  background-color: #244857; }
+
+/*-----------------------  TOP BRANDS ON HOME PAGE -----------------------------------*/
+.brandName h6 {
+  color: rgba(0, 0, 0, 0.7) !important; }
+
+/*------------------------ TOP CATEFORY COUPONS ON HOME PAGE ----------------------------*/
+.brand-logo-top-category {
+  width: 120px;
+  height: 80px;
+  overflow: hidden;
+  background-color: white; }
+
+.categoryTabsParent {
+  /*box-shadow: 0px 0px 1px grey;*/
+  z-index: 100;
+  background-color: white; }
+  .categoryTabsParent .active a {
+    color: #3e2723 !important;
+    font-weight: bold; }
+  .categoryTabsParent .active:after {
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    z-index: 100;
+    width: 3em;
+    border: 2px solid #3e2723; }
+  .categoryTabsParent .categoryTabs {
+    padding: 20px 0px; }
+    .categoryTabsParent .categoryTabs a {
+      text-decoration: none;
+      color: #5a5a5a; }
+
+/**-------------------------- SINGLE COUPON PAGE STYLES ---------------------------------*/
+.single-coupon-data {
+  margin-top: 3em; }
+
+#couponInput:before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 100%;
+  background-color: red;
+  left: 0px; }
+
+.coupon-deal-div {
+  margin-top: 2em;
+  margin-bottom: 3em; }
+
+/*------------------------------------- USER PROFILE STYLES ------------------------------*/
+/*------------------------------------------ FOOTER -----------------------------------------*/
+footer {
+  background: -webkit-linear-gradient(141deg, #254958 0%, #143c4e 71%, #172f30 100%);
+  background: -moz-linear-gradient(141deg, #254958 0%, #143c4e 71%, #172f30 100%);
+  background: linear-gradient(141deg, #254958 0%, #143c4e 71%, #172f30 100%);
+  background: -ms-linear-gradient(141deg, #254958 0%, #143c4e 71%, #172f30 100%);
+  box-shadow: 0px -2px 2px black;
+  z-index: 99; }
+  footer ul li {
+    padding: 5px 0px; }
+  footer li a {
+    color: white; }
+  footer li a:hover {
+    color: white;
+    text-decoration: none; }
+
+.about-coupon-crown-text {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+  .about-coupon-crown-text p {
+    line-height: 24px; }
+
+.footer-headings-color {
+  color: #5fd0d9; }
+
+/*-------------------------------- RESET PASSWORD PAGE------------------------------*/
+.reset-password-div {
+  padding: 3em 0em; }
+
+/*------------------------------- COUPON BY CATEGORY -------------------------------*/
+.brand-logo-copupon-by-category {
+  width: 90px;
+  height: 70px;
+  overflow: hidden; }
+
+/*-------------------------------- COUPON BY BRAND NAME ------------------------------*/
+.brand-logo-coupon-by-brandname {
+  width: 180px;
+  height: 140px;
+  overflow: hidden; }
+
+/*------------------------ FIXED TO RELATIVE RESPONSIVE BRANDNAME FILTER AND COUPONS -----------------------*/
+.brandname-f-to-r {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 1000; }
+
+.filter-f-to-r {
+  position: fixed; }

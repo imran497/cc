@@ -1,0 +1,79 @@
+<div class="col-12 bg-white">
+  <div class="row padding-10" style="border: 1px solid grey">
+    <div class="col-sm-6 my-profile-user-profile">
+        <div class="row padding-5-0">
+          <div class="col-sm-4">Name</div>
+          <div class="col-sm-8">
+            <span ng-if="!editUserDetails">{{userData.name}}</span>
+            <div class="input-group">
+              <input ng-if="editUserDetails" type="text" class="form-control" placeholder="Name" ng-model="userData.name" />
+            </div>
+          </div>
+        </div>
+        <div class="row padding-5-0">
+          <div class="col-sm-4">Email</div>
+          <div class="col-sm-8">
+            <span ng-if="!editUserDetails">{{userData.email}}</span>
+            <div class="input-group">
+              <input ng-if="editUserDetails" type="text" class="form-control" placeholder="Email" ng-model="userData.email"/>
+            </div>
+          </div>
+        </div>
+        <div class="row padding-5-0">
+          <div class="col-sm-4">Mobile No</div>
+          <div class="col-sm-8">
+            <span ng-if="!editUserDetails">{{userData.mobile}}</span>
+            <div class="input-group">
+              <input ng-if="editUserDetails" type="text" class="form-control" placeholder="Mobile" ng-model="userData.mobile"/>
+            </div>
+          </div>
+        </div>
+        <div class="row padding-5-0">
+          <div class="col-sm-4">Date of birth</div>
+          <div class="col-sm-8">
+            <span ng-if="!editUserDetails">{{userData.dob}}</span>
+            <div class="input-group">
+              <input ng-if="editUserDetails" type="date" class="" placeholder="" ng-model="userData.dob"/>
+            </div>
+          </div>
+        </div>
+        <div class="row padding-5-0">
+          <div class="col-sm-4">Address</div>
+          <div class="col-sm-8">
+            <span ng-if="!editUserDetails">{{userData.address}}</span>
+            <div class="input-group">
+              <input ng-if="editUserDetails" type="text" class="form-control" placeholder="Address" ng-model="userData.address"/>
+            </div>
+          </div>
+        </div>
+        <div class="row padding-5-0">
+          <div class="col-sm-4">City</div>
+          <div class="col-sm-8">
+            <span ng-if="!editUserDetails">{{userData.city}}</span>
+            <div class="input-group">
+              <input ng-if="editUserDetails" type="text" class="form-control" placeholder="City" ng-model="userData.city"/>
+            </div>
+          </div>
+        </div>
+        <p ng-if="edit_error"  class="error font-14">{{edit_error}}</p>
+        <p ng-if="edit_success"  class="success font-14">{{edit_success}}</p>
+        <div class="row d-block text-center">
+          <button ng-if="!editUserDetails" ng-click="editUserDetailsFunc()" class="btn btn-sm btn-danger hover-pointer">Edit</button>
+          <button ng-if="editUserDetails" ng-click="saveUserDetailsFunc()" class="btn btn-sm btn-success hover-pointer">Save</button>
+        </div>
+    </div>
+    <div class="col-sm-6 d-flex align-items-center my-profile-wallet-details">
+      <div class="col-sm-12">
+        <div class="row d-block text-center">
+          <h5>Wallet Amount</h5>
+        </div>
+        <div class="row d-block text-center">
+          <h1 style="font-size: 60px">{{userData.amount}}</h1>
+        </div>
+        <div class="row d-block text-center">
+          <a href="/profile/wallet">Go to wallet</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

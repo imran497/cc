@@ -1,0 +1,79 @@
+<!Doctype html>
+<html ng-app="cc" lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="/assets/images/logo/favicon.png" type="image/png">
+  <base href="/">
+  <meta name="keywords" content="Coupons, Offers, Deals, Latest offers, Trending coupons, best deals, best offers, Fashion, Food & Drinks, Travel, Flights, hotels" />
+  <meta name="description" content="Get Best offers and Deals around you adn save on every purchase. best deals and hot offers for you. Get extra cashback from coupon crown" />
+  <!-- script>document.write('<base href="' + document.location + '">');</script -->
+  <title></title>
+  <meta charset="utf-8"/>
+
+  <!----------------------------------------------- BOOTSTRAP ------------------------------------------>
+  <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"-->
+  <link rel="stylesheet" href="lib/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="/css/main_styles.css" type="text/css">
+  <link rel="stylesheet" href="/css/styles.css" type="text/css">
+  <link rel="stylesheet" href="/css/responsive_styles.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <!-- script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  <script src="lib/jquery-3.1.1.slim.min.js"></script>
+
+
+  <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script-->
+  <script src="lib/tether.min.js"></script>
+  <!-- script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script-->
+  <script src="lib/bootstrap.min.js"></script>
+
+  <!-- script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script-->
+  <script src="lib/angular.min.js"></script>
+  <!-- script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script-->
+  <script src="lib/angular-route.js"></script>
+  <!-- script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script -->
+  <script src="lib/angular-sanitize.min.js"></script>
+
+  <!-- MOMENT JS ----->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+  <script src="/client_js/modules/cc_module.js"></script>
+  <script src="/client_js/controllers/homeController.js"></script>
+  <script src="/client_js/controllers/admin/admin_controller.js"></script>
+  <script src="/client_js/controllers/coupons_by_brand_name.js"></script>
+  <script src="/client_js/controllers/coupons_by_category.js"></script>
+  <script src="/client_js/controllers/login_controller.js"></script>
+  <script src="/client_js/controllers/footer_controller.js"></script>
+  <script src="/client_js/controllers/single_coupon_controller.js"></script>
+  <script src="/client_js/controllers/coupons_by_search.js"></script>
+  <script src="/client_js/controllers/profile/user_profile_controller.js"></script>
+  <script src="/client_js/controllers/profile/wallet_controller.js"></script>
+  <script src="/client_js/controllers/profile/reset_password_controller.js"></script>
+  <script src="/client_js/controllers/todayHotDeals_controller.js"></script>
+  <script src="/client_js/directives/authorize_directive.js"></script>
+  <script src="/client_js/directives/top_category_coupons_directive.js"></script>
+  <script src="/client_js/directives/display_coupons_directive.js"></script>
+  <script src="/client_js/directives/coupon_filters_directive.js"></script>
+  <script src="/client_js/directives/upload_directive.js"></script>
+  <script src="/client_js/directives/google_signin_directive.js"></script>
+  <script src="/client_js/services/validations_service.js"></script>
+  <script src="/client_js/factories/get_info_factory.js"></script>
+  <script src="/client_js/factories/update_factory.js"></script>
+  <script src="/client_js/factories/authenticate_factory.js"></script>
+
+</head>
+<body>
+  <input type="text" id="loggedInId" value="<%= loggedIn %>" hidden/>
+  <div class="container-fluid body_container">
+    <div ng-include="'views/header.html'"></div>
+      <div ng-view=""></div>
+    <div ng-include="'views/footer.html'"></div>
+  </div>
+  <modals-directive></modals-directive>
+
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+</body>
+</html>

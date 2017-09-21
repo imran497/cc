@@ -1,0 +1,46 @@
+<footer class="container-fluid" ng-controller="footerController">
+   <div class="row">
+
+      <div class="col-md-8 offset-md-2 col-xs-12 about-coupon-crown-text color-white">
+        <div class="abt_coupons">
+          <span class="d-block text-center footer-headings-color">
+            <h5>Coupon Crown offers... You decide</h5>
+          </span>
+          <p class="font-14">
+             <span class="footer-headings-color">CC</span> is modern discounter between buyers and sellers, to provide the best deal ever seen,<br>
+             <span class="footer-headings-color">CC</span> appreciate more in less with value added quality,<br>
+             <span class="footer-headings-color">CC</span> supports  buyers/customer to have the best deal ever to fulfil their needs in best price,Like<br>
+             <span class="footer-headings-color">CC</span> everyone wants to save money and to be price delegate. Before you buy just check<br>
+             <span class="footer-headings-color">CC</span> for to get the best deals/offers/coupons/discounts and best prices, and although<br>
+             <span class="footer-headings-color">CC</span> will provide special discounts on some products decided by CC team. Cash your savings by connecting with us.</p>
+        </div>
+      </div>
+
+      <div style="width: 80%; margin-left: 10%; margin: top: 1em; margin-bottom: 1em;position:relative;border-top: 1px solid white"></div>
+
+       <div class="col-12 col-md-4 text-center">
+         <h6 class="footer-headings-color">Top Stores</h6>
+         <ul class="padding-0-5">
+           <li class="font-12" ng-repeat="brand in topBrands"><a href="/coupons/brand/{{brand.BrandName}}">{{brand.BrandName}}</a></li>
+         </ul>
+       </div>
+
+       <div class="col-12 col-md-4 text-center">
+         <h6 class="footer-headings-color">Top Categories</h6>
+         <ul class="padding-0-5">
+           <li class="font-12" ng-repeat="category in topCategories"><a href="/coupons/category/{{category.Categoryname}}">{{category.Categoryname}}</a></li>
+         </ul>
+       </div>
+
+       <div class="col-12 col-md-4 text-center">
+         <h6 class="footer-headings-color">About</h6>
+         <ul class="padding-0-5">
+           <li class="font-12"><a href="/about/aboutus">About Us</a></li>
+           <li class="font-12"><a href="/about/policy">Policy</a></li>
+           <li class="font-12"><a href="/about/termsandconditions">Terms & Conditions</a></li>
+         </li>
+       </div>
+
+
+   </div>
+</footer>

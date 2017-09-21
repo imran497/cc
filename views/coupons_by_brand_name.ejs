@@ -1,0 +1,56 @@
+<div class="col-12">
+      <div class="row brand-name-section">
+        <div class="col-lg-3 push-lg-9 text-lg-right text-sm-center text-md-center text-center brand-image">
+          <span class="d-inline-block text-center">
+            <span class="d-inline-block brand-logo-coupon-by-brandname bg-white">
+              <span class="d-flex h-100 align-items-center">
+                <img ng-src="/assets/images/brand_images/{{brandLogo}}" type="image/png" width="100%">
+              </span>
+            </span>
+            <!-- img ng-src="/assets/images/brand_images/180x180/{{brandLogo}}" type="image/png" -->
+            <h6>{{brandName}}</h6>
+          </span>
+        </div>
+        <div class="col-lg-9 d-flex align-items-center brand-name-div">
+          <h3>{{brandName}} Coupons and Deals</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 margin-10-0 padding-5 filter-section">
+
+          <coupon-filters coupons-displayed="couponsByBrandName"></coupon-filters>
+
+          <div class="filter-div padding-5 custom-scrollbar">
+            <span class="d-block text-center"> <h6>Related Stores</h6> </span>
+            <div class="custom-scroll-bar">
+              <span class="d-block" ng-repeat="brand in relatedBrands">
+                <a href="/coupons/brand/{{brand.BrandName}}">{{brand.BrandName}}</a>
+              </span>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-8 col-md-10 d-flex flex-wrap coupons-section coupons-f-to-r">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" ng-repeat="coupon in couponsByBrandName">
+
+              <display-coupons coupon="coupon" show-brand="false"></display-coupons>
+
+            </div>
+
+            <div class="col-12 text-center margin-10-0" ng-if="relatedCoupons">
+              <h5>
+                <span class="other-coupons-header padding-5-0">Other Coupons</span>
+              </h5>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-12" ng-repeat="coupon in relatedCoupons">
+
+              <display-coupons coupon="coupon" show-brand="true"></display-coupons>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+</div>

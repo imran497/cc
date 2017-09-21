@@ -1,0 +1,171 @@
+<header id="header" class="col-12" ng-controller="loginController">
+  <div class="row justify-content-between d-flex align-items-center">
+    <!------- DESKTOP --------->
+    <div class="col-12 text-center hidden-sm-down logo-div clearfix">
+      <div class="row">
+        <div class="col float-left">
+          <div class="logo">
+            <a href="/">
+              <img ng-src="/assets/images/logo/cc_copy.png" width="80px" height="80px"/>
+            </a>
+          </div>
+        </div>
+
+
+        <!-- div class="col-3 color-white d-flex align-items-center float-right">
+          <div class="row w-100">
+            <div class="col-6">
+              <span id="categoriesAbsoluteHeader" class="d-block hover-pointer">Categories</span>
+            </div>
+            <div class="col-6">
+              <span id="storesAbsoluteHeader" class="d-block hover-pointer">Stores</span>
+            </div>
+          </div>
+        </div -->
+
+        <div class="col-md-4 col-lg-3 d-flex align-items-center float-right">
+          <span>
+            <div class="input-group">
+              <input class="form-control" type="text" id="searchQueryInput" ng-model="searchQuery" autofocus placeholder="Search Flipkart, Amazon.."/>
+              <div class="input-group-btn">
+                <button type="button" class="btn header-buttons hover-pointer color-white" ng-click="searchCoupons()">
+                  <i class="fa fa-search color-white" aria-hidden="true"></i>
+                </button>
+              </div>
+              <!--datalist id="searchInput">
+                <option value="{{brand.BrandName}}" ng-repeat="brand in getBrandList"/>
+              </datalsit -->
+            </div>
+          </span>
+        </div>
+
+        <div class="col-2 d-flex align-items-center float-right">
+          <div ng-hide="loggedInValue">
+            <button class="btn header-buttons hover-pointer color-white" data-target="#login_signup" data-toggle="modal">Login/Signup</button>
+          </div>
+
+          <div ng-show="loggedInValue">
+            <button class="btn header-buttons my_profile_menu_button hover-pointer color-white">My Account</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MOBILE ---->
+    <div class="col-12 align-items-center hidden-md-up clearfix">
+      <div class="row">
+        <!-- div>
+          <ul ng-click="show_leftOverlayPanel()" style="width: 45px; margin: 0px; padding: 10px">
+            <li style="display:block;width: 100%;border: 1px solid white; margin: 5px 0px"></li>
+            <li style="display:block;width: 100%;border: 1px solid white; margin: 5px 0px"></li>
+            <li style="display:block;width: 100%;border: 1px solid white; margin: 5px 0px"></li>
+          </ul>
+        </div -->
+        <div class="col float-left">
+          <!-- div class="logo">
+            <a href="/">
+              <img ng-src="/assets/images/logo/cc_copy.png" width="50px" height="50px"/>
+            </a>
+          </div -->
+          <div class="d-inline-block text-center">
+            <a href="/">
+              <h5 class="color-white">Coupon<br>Crown</h5>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-2 d-flex align-items-center float-right" ng-hide="showInputMobile">
+          <span ng-click="showInputMobile = !showInputMobile">
+            <i class="fa fa-search fa-lg color-white" aria-hidden="true"></i>
+          </span>
+        </div>
+
+        <!------  INPUT SEARCH FIELD ON MOBILE.... DISPLAYS ON SEARCH ICON CLICK ------------->
+        <div class="col d-flex align-items-center float-right" ng-show="showInputMobile">
+          <span>
+            <div class="input-group">
+              <input class="form-control" type="text" id="searchQueryInput" ng-model="searchQuery" autofocus placeholder="Search Flipkart, Amazon.."/>
+              <div class="input-group-btn">
+                <button class="btn header-buttons hover-pointer" ng-click="searchCoupons()">
+                  <i class="fa fa-search color-white" aria-hidden="true"></i>
+                </button>
+              </div>
+              <!--datalist id="searchInput">
+                <option value="{{brand.BrandName}}" ng-repeat="brand in getBrandList"/>
+              </datalsit -->
+            </div>
+          </span>
+        </div>
+
+        <div class="col-2 d-flex align-items-center float-right">
+          <span data-toggle="modal" data-target="#login_signup" ng-if="!loggedInValue">
+            <i class="fa fa-user-circle fa-lg color-white" aria-hidden="true"></i>
+          </span>
+          <span class="d-block my_profile_menu_button" ng-if="loggedInValue">
+            <i class="fa fa-user-circle fa-lg color-white" aria-hidden="true"></i>
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!---------------- MY PROFILE MENU ------------------->
+  <div id="my_profile_menu" class="col-6 col-sm-4 col-md-2 col-lg-2 text-center">
+    <ul>
+      <li class="margin-5-0">
+        <a class="color-white" href="/profile/my-profile">My Profile</a>
+      </li>
+      <li class="margin-5-0">
+        <a class="color-white" href="/profile/wallet">Wallet</a>
+      </li>
+      <li class="margin-5-0">
+        <a class="color-white" href="javascript:void(0)" ng-click="logout()">Signout</a>
+      </li>
+    </ul>
+  </div>
+
+  <!------------- CATEGORIES AFTER MOUSEOVER ON CATEGORY NAV ------------>
+  <!--div id="categoriesAbsoluteHeaderTarget">
+    <ul>
+      <li>scsdc</li>
+      <li>scsdc</li>
+      <li>scsdc</li>
+      <li>scsdc</li>
+      <li>See All</li>
+    </ul>
+  </div -->
+
+  <!------------- STORES AFTER MOUSEOVER ON STORES NAV ------------>
+  <!-- div id="storesAbsoluteHeaderTarget">
+    <ul>
+      <li>scsdc</li>
+      <li>scsdc</li>
+      <li>scsdc</li>
+      <li>scsdc</li>
+      <li>See xxxx</li>
+    </ul>
+  </div -->
+</header>
+
+<div id="fadeWhiteBg" style="width: 100%; height: 100%; position: fixed; z-index: 1000; top: 0px; background-color: rgba(255, 255, 255, 0.5); display: none" class="">
+
+
+</div>
+
+<div id="Mobile_leftOverlayPanel" style="position: fixed; height: 100%;z-index: 1001; top: 0px; padding: 15px; display: none" class="bg-info">
+  <div>
+    <span>Top Categories</span>
+  </div>
+  <div>
+    <span>Top Stores</span>
+  </div>
+  <div>
+    <span>All Stores</span>
+  </div>
+  <div>
+    <span>All Categories</span>
+  </div>
+</div>

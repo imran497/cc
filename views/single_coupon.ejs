@@ -1,0 +1,53 @@
+<div class="bg-white padding-10-0">
+
+  <div class="col-md-8 offset-md-2 single-coupon-data">
+    <div class="row">
+      <div class="text-center col-sm-12"><h3>{{couponData.Title}}</h3></div>
+    </div>
+    <div class="row padding-5-0">
+      <div class="text-center text-sm-left col-sm-3"><b>Store</b></div>
+      <div class="text-center text-sm-left col-sm-9" ng-bind="couponData.BrandName"></div>
+    </div>
+    <div class="row padding-5-0">
+      <div class="text-center text-sm-left col-sm-3"><b>Category</b></div>
+      <div class="text-center text-sm-left col-sm-9" ng-bind="couponData.Categoryname"></div>
+    </div>
+    <div class="row padding-5-0">
+      <div class="text-center text-sm-left col-sm-3"><b>Description</b></div>
+      <div class="text-center text-sm-left col-sm-9" ng-bind-html="couponData.Description"></div>
+    </div>
+    <div class="row padding-5-0">
+      <div class="text-center text-sm-left col-sm-3"><b>Expires on</b></div>
+      <div class="text-center text-sm-left col-sm-9" ng-bind="couponData.ValidTill"></div>
+    </div>
+  </div>
+
+  <div class="col-md-8 offset-md-2 coupon-deal-div">
+    <div ng-if="couponData.Code != 'Applied'">
+      <div class="input-group">
+        <input class="form-control" value="{{couponData.Code}}" id="couponInput"/>
+        <button id="dealButton" type="button" class="input-group-addon btn btn-danger bg-danger hover-pointer color-white" ng-click="couponClickEvent(couponData)">Copy</button>
+      </div>
+    </div>
+    <button class="btn btn-info btn-block rounded-0" ng-click="couponClickEvent(couponData)" ng-if="couponData.Code == 'Applied'">
+        Activate Deal
+    </button>
+  </div>
+
+
+  <!--- OTHER COUPONS ------------>
+  <div class="col-sm-12 text-center margin-10-0" ng-if="relatedCoupons">
+    <h5>
+      <span class="other-coupons-header padding-5-0">Other Coupons</span>
+    </h5>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-6" ng-repeat="coupon in relatedCoupons">
+        <display-coupons coupon="coupon" show-brand="true"></display-coupons>
+      </div>
+    </div>
+  </div>
+
+</div>

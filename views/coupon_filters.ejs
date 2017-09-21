@@ -1,0 +1,14 @@
+<div class="filter-div padding-5 margin-10-0">
+  <div ng-if="categoriesFilterData">
+    <span class="d-block text-center"> <h6>Filter by Category</h6> </span>
+    <div class="custom-scroll-bar">
+      <label class="d-block hover-pointer" ng-repeat="category in categoriesFilterData"> <input type="checkbox" name="categoryFilterCB" value="{{category.id}}" ng-click="applyFilter()"/> <span></span>{{category.Categoryname}}</label>
+    </div>
+  </div>
+  <div ng-if="brandsFilterData">
+    <span class="d-block text-center"> <h6>Filter by Store</h6> </span>
+    <div class="custom-scroll-bar">
+      <label class="d-block hover-pointer" ng-repeat="brand in brandsFilterData"> <input type="checkbox" name="brandFilterCB" value="{{brand.id}}" ng-click="applyFilter()"/> <span></span>{{brand.BrandName}}</label>
+    </div>
+  </div>
+</div>

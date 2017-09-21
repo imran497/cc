@@ -1,0 +1,80 @@
+<div class="col-12 coupon-div">
+  <div class="row coupon-brand-info" ng-if="showBrand == 'true'">
+    <div class="col-12 clearfix">
+      <span class="float-left d-flex align-items-center">{{coupon.BrandName}}</span>
+      <span class="d-flex align-items-center float-right" style="width: 100px; height: 40px; overflow: hidden; background-color: white ">
+          <img ng-src="/assets/images/brand_images/{{coupon.BrandLogo}}" type="image/png" width="100%">
+      </span>
+      <!-- img class="float-right" ng-src="/assets/images/brand_images/100x40/{{coupon.BrandLogo}}"/ -->
+    </div>
+  </div>
+
+  <div class="row coupon-title">
+    <div class="col-12">{{coupon.Title}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 text-center">
+      <span class="d-inline-block text-center"><h3>{{coupon.DiscountPercent}}</h3></span>
+    </div>
+  </div>
+
+  <div class="row coupon-description">
+    <div class="col-12">
+      <span class="d-block font-14" ng-bind-html="coupon.Description"></span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12" ng-if="showBrand == 'true'">
+      <a class="font-14" href="/coupons/brand/{{coupon.BrandName}}">show coupons in {{coupon.BrandName}}</a>
+    </div>
+    <div class="col-12" ng-if="showBrand == 'false'">
+      <a class="font-14" href="/coupons/category/{{coupon.Categoryname}}">show coupons in {{coupon.Categoryname}}</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 font-14 clearfix">
+
+      <span class="badge badge-success float-left" ng-if="!expired">Ends on: {{coupon.ValidTill}}</span>
+      <span class="badge badge-danger float-left" ng-if="expired">Expired</span>
+
+
+      <span class="badge badge-default float-right" ng-if="coupon.Code == 'Applied'">
+        DEAL
+      </span>
+      <span class="badge badge-default float-right" ng-if="coupon.Code != 'Applied' && showCode == false">
+        COUPON
+      </span>
+
+    </div>
+  </div>
+
+  <div class="row coupon-button">
+    <a href="/coupons/coupon/{{coupon.id}}" class="btn btn-block coupon-button-bg-color color-white hover-pointer text-left clearfix">
+      <label class="float-left" style="margin-bottom:0px">Show Me Crown</label>
+      <span class="col-1 float-right d-flex">
+        <i class="fa fa-angle-right font-20"></i>
+        <i class="fa fa-angle-right font-20"></i>
+        <i class="fa fa-angle-right font-20"></i>
+      </span>
+    </a>
+  </div>
+
+  <!-- div class="row">
+    <div class="col-12">
+      <button class="btn btn-info btn-block rounded-0" ng-click="couponClickEvent(coupon)">
+        <span ng-if="coupon.Code == 'Applied'">
+          Activate Deal
+        </span>
+        <span ng-if="coupon.Code != 'Applied' && showCode == false">
+          Show Coupon Code
+        </span>
+        <span ng-if="coupon.Code != 'Applied' && showCode == true">
+          {{coupon.Code}}
+        </span>
+      </button>
+    </div>
+  </div -->
+</div>

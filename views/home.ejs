@@ -1,0 +1,77 @@
+<div class="col-12 bg-white padding-10-0">
+    <div class="row no-gutters">
+      <div id="bannerCarousel" class="carousel slide col-md-10 offset-md-1 col-12" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#bannerCarousel" data-slide-to="{{$index}}" ng-class="{active: $index == '0'}" ng-repeat="banner in bannerContent"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <a href="{{banner.BannerUrl}}" target="_blank" class="carousel-item" ng-class="{active: $index == '0'}" ng-repeat="banner in bannerContent">
+            <img class="d-block img-fluid banner-img" ng-src="assets/images/brand_images/1200x300_banner/{{banner.BannerImage}}" alt="{{banner.BannerTitle}}">
+            <!-- div class="carousel-caption d-none d-md-block">
+              <h3 style="color: red">{{banner.BannerTitle}}</h3>
+              <p style="color: red">{{banner.BannerOfferPrice}}</p>
+            </div -->
+          </a>
+        </div>
+        <a class="carousel-control-prev" href="javascript:void(0)" ng-click="prevSlide()" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="javascript:void(0)" ng-click="nextSlide()" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+</div>
+<div class="col-12 margin-10-0">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h5>Top Stores</h5>
+    </div>
+    <div class="d-flex flex-wrap col-12">
+      <div class="col-lg-2 col-md-3 col-sm-3 col-6 text-center margin-10-0" ng-repeat="brand in topBrands">
+        <a href="/coupons/brand/{{brand.BrandName}}">
+          <div class="bg-white padding-10-0">
+            <div class="topBrandImage text-center">
+              <!-- img src="http://via.placeholder.com/120x80" -->
+              <!-- img ng-src="/assets/images/brand_images/120x80/{{brand.BrandLogo}}" type="image/png" -->
+              <span class="d-inline-block brand-logo-top-category">
+                <span class="d-flex h-100 align-items-center">
+                  <img ng-src="/assets/images/brand_images/{{brand.BrandLogo}}" type="image/png" width="100%">
+                </span>
+              </span>
+
+            </div>
+            <div class="brandName">
+              <h6>{{brand.BrandName}}</h6>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="row trending-coupons-div">
+      <span class="col-12 text-center"><h5>Trending Coupons</h5></span>
+      <a href="/coupons/coupon/{{coupon.id}}" class="col-md-4 col-sm-12" ng-repeat="coupon in trendingCoupons">
+        <div class="col text-center margin-10-0">
+          <img ng-src="/assets/images/trending/{{coupon.id}}.jpg" style="height: 100%;"/>
+          <div class="col-sm-8 offset-sm-2 col-md-10 offset-md-1 text-center title-div">
+            <div class="row">
+              <div class="col-3 d-flex align-items-center" style="overflow:hidden">
+                <img ng-src="/assets/images/brand_images/{{coupon.BrandLogo}}" style="width: 100%"/>
+              </div>
+              <div class="col-9">
+                <h6>{{coupon.Title}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  <top-category-coupons></top-category-coupons>
+
+</div>
