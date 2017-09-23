@@ -1,6 +1,7 @@
 angular.module("cc")
 .controller("couponsBySearchController", ["$scope", "$routeParams", "getInfoFactory", function($scope, $routeParams, getInfoFactory){
   $scope.couponsSearch = new Array();
+  $scope.searchItem = $routeParams.searchItem;
   // FETCHIG THE COUPONS BY BRAND NAME
   getInfoFactory.getCouponsBySearch($routeParams.searchItem).then(function(result){
     if(result.status == 200){

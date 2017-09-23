@@ -1,3 +1,8 @@
+<view-title>{{category}} Coupons and Deals</view-title>
+<meta view-head property="keywords" content="{{category}} Coupons, {{category}} Latest deals, {{category}} best offers, Save on purchases in {{category}}, {{category}} latest Offers, Grab {{category}} deals">
+<meta view-head property="description" content="Grab Best offers and deals on {{category}}. Latest and Best {{category}} offers. Get extra cashback with couponcrown for purchases on {{category}}." >
+
+
 <div class="col-12">
   <div class="row brand-name-section">
       <div class="col-lg-3 push-lg-9 text-lg-right text-sm-center text-md-center text-center brand-image">
@@ -5,7 +10,7 @@
         <div class="clearfix bg-warning" style="width: 180px">
           <span class="d-inline-block float-left brand-logo-copupon-by-category bg-white" ng-repeat="brandLogo in brandLogos track by $index">
             <span class="d-flex h-100 align-items-center">
-              <img ng-src="/assets/images/brand_images/{{brandLogo}}" type="image/png" width="100%">
+              <img ng-src="/assets/images/brand_images/{{brandLogo}}" type="image/png" width="100%" alt="{{brandLogo}} Image">
             </span>
           </span>
           <!-- img src="/assets/images/brand_images/{{brandLogo}}" height="90px" width="90px" class="float-left" type="image/png" ng-repeat="brandLogo in brandLogos track by $index" -->
@@ -23,7 +28,7 @@
           <coupon-filters coupons-displayed="couponsCategory"></coupon-filters>
 
         </div>
-        <div class="col-lg-8 col-md-10 d-flex flex-wrap coupons-section">
+        <div class="col-lg-8 col-md-10 coupons-section">
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12" ng-repeat="coupon in couponsCategory">
 

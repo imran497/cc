@@ -19,7 +19,7 @@ angular.module("cc")
       $scope.coupon['ValidTill'] = moment($scope.coupon['ValidTill'], "YYYY-MM-DD").format("D MMM YYYY");
 
       $scope.showCode = false;
-      $scope.couponClickEvent = (coupon)=>{
+      $scope.couponClickEvent = function(coupon){
         $scope.showCode = true;
         var ex = window.open(coupon.Url, '_blank');
       };

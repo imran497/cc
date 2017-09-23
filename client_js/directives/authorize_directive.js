@@ -20,7 +20,7 @@ angular.module("cc")
 
 
 
-      $scope.toggleNavValues = (id)=>{
+      $scope.toggleNavValues = function(id){
         if(id == "show_forgot_password_tab"){
           $scope.show_login_tab = false;
           $scope.show_register_tab = false;
@@ -119,19 +119,19 @@ angular.module("cc")
       jQuery(document).ready(function(){
         jQuery("#login_form").on("keydown", function(event){
           if(event.keyCode == 13){
-              jQuery("#login_form .btn-danger").trigger("click");
+              jQuery("#login_form #btn-login").trigger("click");
           }
         });
 
         jQuery("#register_form").on("keydown", function(event){
           if(event.keyCode == 13){
-            jQuery("#register_form .btn-danger").trigger("click");
+            jQuery("#register_form #btn-register").trigger("click");
           }
         });
 
         jQuery("#reset_form").on("keydown", function(event){
           if(event.keyCode == 13){
-            jQuery("#reset_form .btn-danger").trigger("click");
+            jQuery("#reset_form #btn-forgotpwd").trigger("click");
           }
         });
       });

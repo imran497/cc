@@ -10,21 +10,20 @@ angular.module("cc")
     controller: ["$scope", "$attrs", "$element", function($scope, $attrs, $element){
 
       $scope.topCategories = new Array();
-      getInfoFactory.getConfig().then((result, error) => {
+      getInfoFactory.getConfig().then(function(result, error){
         if(error){
           console.log(error);
         }
         else{
-          getInfoFactory.getTopCategoriesFromDb(result.data).then((dbResult, dbError) => {
+          getInfoFactory.getTopCategoriesFromDb(result.data).then(function(dbResult, dbError){
             if(dbError){
               console.log(dbError);
             }else{
-              console.log(dbResult.data);
               $scope.topCategories = dbResult.data.slice();
             }
           });
 
-          getInfoFactory.getTopCategoryCouponsFromDb(result.data['topCategories'][0]).then((dbResult, dbError) => {
+          getInfoFactory.getTopCategoryCouponsFromDb(result.data['topCategories'][0]).then(function(dbResult, dbError){
             if(dbError){
               console.log(dbError);
             }else{
@@ -35,7 +34,7 @@ angular.module("cc")
       });
 
       $scope.changeTopCategoryCoupons = function(categoryId){
-        getInfoFactory.getTopCategoryCouponsFromDb(categoryId).then((dbResult, dbError) => {
+        getInfoFactory.getTopCategoryCouponsFromDb(categoryId).then(function(dbResult, dbError){
           if(dbError){
             console.log(dbError);
           }else{

@@ -18,7 +18,7 @@ angular.module("cc")
             //console.log(error);
           });
 
-        $scope.applyFilter = ()=>{
+        $scope.applyFilter = function(){
           var categoryFiltersApplied = new Array();
           var defer = $q.defer();
           defer.resolve($("[name=categoryFilterCB]").each(function(){

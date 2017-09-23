@@ -30,7 +30,7 @@
             </div>
             <p ng-if="login_error" class="error font-14 margin-5-0">{{login_error}}</p>
             <a class="font-14 margin-5-0 d-block text-right" href="javascript:void(0)" ng-click="toggleNavValues('show_forgot_password_tab')">Forgot Password</a>
-            <a href="javascript:void(0)" ng-click="userLogin(login_email, login_password)" class="btn btn-block btn-blue">Login</a>
+            <a href="javascript:void(0)" ng-click="userLogin(login_email, login_password)" id="btn-login" class="btn btn-block btn-blue">Login</a>
           </form>
           <google-sign-in-button on-sign-in="onSignIn(response)" g-client-id="282019346056-fe70mm89snqr5qp5k4ivh8fh5g5dnc8u.apps.googleusercontent.com"></google-sign-in-button>
         </div>
@@ -54,7 +54,7 @@
               <input class="form-control" type="text" ng-model="mobile" placeholder="Mobile No"/>
             </div>
             <p class="error margin-5-0 font-14" ng-if="register_error">{{register_error}}</p>
-            <a href="javascript:void(0)" ng-click="userRegister(name, register_email, password, confirm_password, mobile)" class="btn btn-block btn-blue">Register</a>
+            <a href="javascript:void(0)" ng-click="userRegister(name, register_email, password, confirm_password, mobile)" id="btn-register" class="btn btn-block btn-blue">Register</a>
           </form>
         </div>
 
@@ -67,7 +67,7 @@
             </div>
             <p class="error font-14 margin-5-0" ng-if="reset_error">{{reset_error}}</p>
             <p class="success font-14 margin-5-0  " ng-if="reset_success_message">{{reset_success_message}}</p>
-            <a href="javascript:void(0)" ng-click="forgotPassword(email_forgot)" class="btn btn-block btn-blue">Send Reset Link</a>
+            <a href="javascript:void(0)" ng-click="forgotPassword(email_forgot)" id="btn-forgotpwd" class="btn btn-block btn-blue">Send Reset Link</a>
           </form>
         </div>
     </div>

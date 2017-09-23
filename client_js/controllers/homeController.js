@@ -5,14 +5,14 @@ angular.module("cc")
   $scope.bannerContent = new Array();
   $scope.trendingCoupons = new Array();
 
-  getInfoFactory.getConfig().then((result, error) => {
+  getInfoFactory.getConfig().then(function(result, error){
     if(!error){
-      getInfoFactory.getTopBrandsFromDb(result.data).then((dbResult, dbError) => {
+      getInfoFactory.getTopBrandsFromDb(result.data).then(function(dbResult, dbError){
         if(!dbError){
           $scope.topBrands = dbResult.data.slice();
         }
       });
-      getInfoFactory.getTrendingCoupons(result.data).then((dbResult, dbError) => {
+      getInfoFactory.getTrendingCoupons(result.data).then(function(dbResult, dbError){
         if(!dbError){
           $scope.trendingCoupons = dbResult.data.slice();
         }

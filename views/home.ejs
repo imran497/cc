@@ -1,3 +1,8 @@
+<view-title>Couponcrown</view-title>
+<meta view-head property="keywords" content="Latest and Best Coupons, Latest deals, best offers, Discounts, Save on purchases, latest Offers, Grab deals, Best place for savings, Save extra, extra cashback">
+<meta view-head property="description" content="Grab Best offers and deals on all brands. Latest and Best offers on every brand. Great Discounts. Get extra cashback with couponcrown for purchases." >
+
+
 <div class="col-12 bg-white padding-10-0">
     <div class="row no-gutters">
       <div id="bannerCarousel" class="carousel slide col-md-10 offset-md-1 col-12" data-ride="carousel">
@@ -38,7 +43,7 @@
               <!-- img ng-src="/assets/images/brand_images/120x80/{{brand.BrandLogo}}" type="image/png" -->
               <span class="d-inline-block brand-logo-top-category">
                 <span class="d-flex h-100 align-items-center">
-                  <img ng-src="/assets/images/brand_images/{{brand.BrandLogo}}" type="image/png" width="100%">
+                  <img ng-src="/assets/images/brand_images/{{brand.BrandLogo}}" type="image/png" width="100%" alt="{{brand.BrandName}} Image">
                 </span>
               </span>
 
@@ -57,11 +62,11 @@
       <span class="col-12 text-center"><h5>Trending Coupons</h5></span>
       <a href="/coupons/coupon/{{coupon.id}}" class="col-md-4 col-sm-12" ng-repeat="coupon in trendingCoupons">
         <div class="col text-center margin-10-0">
-          <img ng-src="/assets/images/trending/{{coupon.id}}.jpg" style="height: 100%;"/>
+          <img ng-src="/assets/images/trending/{{coupon.id}}.jpg" style="height: 100%;" alt="{{coupon.Title}} image"/>
           <div class="col-sm-8 offset-sm-2 col-md-10 offset-md-1 text-center title-div">
             <div class="row">
               <div class="col-3 d-flex align-items-center" style="overflow:hidden">
-                <img ng-src="/assets/images/brand_images/{{coupon.BrandLogo}}" style="width: 100%"/>
+                <img ng-src="/assets/images/brand_images/{{coupon.BrandLogo}}" style="width: 100%" alt="{{coupon.Title}} Image"/>
               </div>
               <div class="col-9">
                 <h6>{{coupon.Title}}</h6>
@@ -73,5 +78,13 @@
     </div>
 
   <top-category-coupons></top-category-coupons>
+
+  <div id="fixed_image_div" style="position: fixed;bottom: 1em; right: 1em; z-index: 1000; box-shadow: 0px 0px 10px black">
+    <a href="https://goo.gl/W4d3GN" target="_blank" style="width: 250px; display: block" >
+      <img src="/assets/images/fixed_image/fixed_image.jpg" width="100%" alt="Trending Offer Now"/>
+    </a>
+    <span style="z-index: 1010; position: absolute; top:0px; background-color:grey;right: 0px; padding: 0px 5px; color: white; cursor: pointer" onclick='jQuery("#fixed_image_div").css("display", "none");'>x</span>
+  </div>
+
 
 </div>

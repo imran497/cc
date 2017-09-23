@@ -1,4 +1,4 @@
-angular.module("cc", ["ngRoute", "ngSanitize"])
+angular.module("cc", ["ngRoute", "ngSanitize", "viewhead"])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
     .when('/', {
