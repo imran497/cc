@@ -20,6 +20,8 @@ var admin = express.Router();
 var jsonParser = bodyParser.json();
 app.use(bodyParser.urlencoded({ extended: true }));
 
+admin.post("/password", jsonParser, checkPassword);
+
 admin.post('/uploadCouponData', upload.single('file'), function(req, res){
   db((err, connection) => {
     var query = "Load data infile '" + (__dirname).replace(/\\/g, "/") + "/uploads/coupons.csv'" +
@@ -38,5 +40,15 @@ admin.post('/uploadCouponData', upload.single('file'), function(req, res){
 
   });
 });
+
+
+function checkPassword(req, res, next){
+  console.log(req.body);
+  if(req.body.password == "Couponcrown@123"){
+    res.status(200).send("Valid Password");
+  }else{
+    res.status(404).send("Invalid Password");
+  }
+}
 
 module.exports = admin;

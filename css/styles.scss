@@ -32,12 +32,12 @@ header{
 }
 
 .logo{
-  width:80px;
+  width:140px;
   height:80px;
   overflow:hidden;
-  transform: scale(1.5);
   margin-left: 1em;
   margin-top: 5px;
+  text-align: center;
 }
 
 .navigation_links_header ul {
@@ -82,6 +82,23 @@ header{
 .header-buttons, header-buttons:hover{
   background-color: #c9302c;
   border-color: #c9302c;
+}
+
+.hot-deals-icon{
+  box-shadow: -2px 5px 10px black;
+  position: absolute;
+  font-weight: 600;
+  line-height: 15px;
+  bottom: -30px;
+  right: 0px;
+  z-index: 10000;
+  color: yellow;
+  background-color: #112a35;
+  text-align: center;
+  &:hover, &:active, &:focus{
+    color: yellow;
+    text-decoration: none;
+  }
 }
 
 /*-------------------------- LOGIN OVERLAY STYLES ----------------------------------*/
@@ -338,4 +355,40 @@ footer{
 }
 .filter-f-to-r{
   position: fixed;
+}
+
+/*-------------------------------- TODAY'S HOT DEALS ---------------------------------*/
+.product-anchor{
+  text-decoration: none;
+  &:hover, &:focus, &:active{
+    box-shadow: 0px 0px 10px grey;
+    text-decoration: none;
+  }
+}
+
+.product-image-div{
+  height: 150px;
+  img{
+    max-height:100%;
+    margin: auto;
+  }
+}
+
+.product-title-div{
+  height: 60px;
+  color: grey;
+}
+
+.product-offerprice{
+  font-weight: 600;
+  font-size: 22px;
+  color: black;
+}
+
+.product-actualprice{
+  color: grey;
+}
+
+.product-clicks{
+  color: grey;
 }

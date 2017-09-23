@@ -4,6 +4,7 @@ var auth = require("./node_controllers/authorize.js")
 var admin = require("./node_controllers/admin.js")
 var coupons = require("./node_controllers/fetch_coupons.js");
 var profile = require("./node_controllers/user_profile.js");
+var productDeals = require("./node_controllers/todayHotDeals.js");
 var sass = require("node-sass");
 var fs = require("fs");
 var logger = require("./node_controllers/logger.js");
@@ -26,6 +27,7 @@ app.use("/authenticate", auth);
 app.use("/coupons", coupons);
 app.use("/profile", profile);
 app.use("/admin", admin);
+app.use("/deals", productDeals);
 
 /*app.use("*", (req, res) =>{
   console.log("file is rendered");

@@ -1,0 +1,31 @@
+<div class="col-12">
+  <div class="row">
+    <div class="col-12 text-left margin-10-0">
+      <h5>Today's Best Deals</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex flex-wrap">
+      <div class="row w-100">
+        <div class="col-sm-12 col-md-4 col-lg-3 margin-5-0" ng-repeat="product in productsArray">
+            <a href="{{product.url}}" target="_blank" class="bg-white padding-10 d-block product-anchor" ng-click="productClicked(product.id)">
+              <img src="/assets/images/brand_images/{{product.BrandLogo}}" height="15px" />
+              <div class="text-center margin-10-0 product-image-div">
+                <img src="/assets/images/product_deals_images/{{product.productImage}}"/>
+              </div>
+              <div class="font-14 product-title-div">
+                  {{product.title}}
+              </div>
+              <div class="col-12 text-center">
+                <span class="product-offerprice">Rs {{product.offerprice}}</span>
+                <span class="product-actualprice font-12">(<strike>Rs {{product.actualprice}}</strike>)</span>
+              </div>
+              <div class="col-12 text-left font-12 padding-5-0 product-clicks">
+                {{product.clicks}} Clicks
+              </div>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

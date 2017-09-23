@@ -59,7 +59,7 @@ angular.module("cc", ["ngRoute", "ngSanitize", "viewhead"])
         controller: 'adminController'
     })
     .when('/deals/today-hot-deals', {
-        title: 'Admin',
+        title: 'Today\'s Best Deals',
         templateUrl: '/views/todayHotDeals.ejs',
         controller: 'todayHotDealsController'
     })
